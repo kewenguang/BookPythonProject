@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import pandas as pd
-from Cython.Shadow import inline
+#from Cython.Shadow import inline
 plt.style.use('ggplot')
 #%matplotlib inline
 import numpy as np
