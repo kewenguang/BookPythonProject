@@ -11,10 +11,10 @@ import pandas as pd
 PATH = r'./iris/'
 df = pd.read_csv(PATH + 'iris.data', names=['sepal length','sepal width','petal length','petal width','class'])
 
-clf = OneVsRestClassifier(SVC(kernel='linear'))
+clf = OneVsRestClassifier(SVC(kernel='linear'))  #用一个分类器对应一个类别， 每个分类器都把其他全部的类别作为相反类别看待。
 
 X = df.iloc[:,:4]
-y = df.iloc[:,4]
+y = df.iloc[:,4]  
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.3) #train_test_split 将数据打乱并划分成四个子集 test_size=.3表示百分之三十的数据分配给X_test和y_test  
 clf.fit(X_train, y_train)
